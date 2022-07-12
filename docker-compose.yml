@@ -1,0 +1,19 @@
+version: '3'
+services:
+  base:
+    build: ./docs-base/
+    ports:
+      - "3001:3001"
+  0sec:
+    build: ./docs-0sec/
+    ports:
+      - "3002:3002"
+  wooyun:
+    image: v7hinc/wooyun
+    ports:
+      - "3003:80"
+    volumes:
+      - ~/upload:/home/wwwroot/default/upload
+    command: "/bin/bash"
+    tty: true
+    
