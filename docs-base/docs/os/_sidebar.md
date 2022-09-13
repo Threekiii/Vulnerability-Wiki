@@ -3,6 +3,7 @@
 * [Linux-DirtyPipe权限提升漏洞-CVE-2022-0847](os/Linux-DirtyPipe权限提升漏洞-CVE-2022-0847.md)
 * [Linux-eBPF权限提升漏洞-CVE-2022-23222](os/Linux-eBPF权限提升漏洞-CVE-2022-23222.md)
 * [Linux-kernel权限提升漏洞-CVE-2021-3493](os/Linux-kernel权限提升漏洞-CVE-2021-3493.md)
+* [Linux-openvswitch权限提升漏洞-CVE-2022-2639](os/Linux-openvswitch权限提升漏洞-CVE-2022-2639.md)
 * [Linux-Polkit权限提升漏洞-CVE-2021-4034](os/Linux-Polkit权限提升漏洞-CVE-2021-4034.md)
 * [Linux-sudo权限提升漏洞-CVE-2021-3156](os/Linux-sudo权限提升漏洞-CVE-2021-3156.md)
 * [Windows-CryptoAPI欺骗漏洞-CVE-2020-0601](os/Windows-CryptoAPI欺骗漏洞-CVE-2020-0601.md)
