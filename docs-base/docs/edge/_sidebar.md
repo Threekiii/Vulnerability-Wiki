@@ -57,7 +57,7 @@
 * [CVE-2020-29133-Coremail-存储型XSS](edge/CVE-2020-29133-Coremail-存储型XSS.md)
 * [CVE-2020-29564-Consul-Docker-images-空密码登录漏洞](edge/CVE-2020-29564-Consul-Docker-images-空密码登录漏洞.md)
 * [CVE-2020-35476-OpenTSDB-2.4.0-远程代码执行](edge/CVE-2020-35476-OpenTSDB-2.4.0-远程代码执行.md)
-* [CVE-2020-36179〜82-Jackson-databind-SSRF＆RCE](edge/CVE-2020-36179〜82-Jackson-databind-SSRF＆RCE.md)
+* [CVE-2020-36179~82-Jackson-databind-SSRF＆RCE](edge/CVE-2020-36179~82-Jackson-databind-SSRF＆RCE.md)
 * [CVE-2020-6019-Valve-Game-Networking-Sockets-安全漏洞](edge/CVE-2020-6019-Valve-Game-Networking-Sockets-安全漏洞.md)
 * [CVE 2020 6308 SAP POC](edge/CVE-2020-6308-SAP-POC.md)
 * [CVE-2020-8209-XenMobile(Citrix-Endpoint-Management)-目录遍历漏洞](edge/CVE-2020-8209-XenMobile(Citrix-Endpoint-Management)-目录遍历漏洞.md)

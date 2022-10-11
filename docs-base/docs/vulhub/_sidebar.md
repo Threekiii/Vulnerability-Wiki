@@ -7,6 +7,7 @@
 * [Apache-Airflow-Celery-消息中间件命令执行-CVE-2020-11981](vulhub/Apache-Airflow-Celery-消息中间件命令执行-CVE-2020-11981.md)
 * [Apache-Airflow-示例DAG中的命令注入-CVE-2020-11978](vulhub/Apache-Airflow-示例DAG中的命令注入-CVE-2020-11978.md)
 * [Apache-Airflow-默认密钥导致的权限绕过-CVE-2020-17526](vulhub/Apache-Airflow-默认密钥导致的权限绕过-CVE-2020-17526.md)
+* [Apache-APISIX-Dashboard-API权限绕过导致RCE-CVE-2021-45232](vulhub/Apache-APISIX-Dashboard-API权限绕过导致RCE-CVE-2021-45232.md)
 * [Apache-APISIX-默认密钥漏洞-CVE-2020-13945](vulhub/Apache-APISIX-默认密钥漏洞-CVE-2020-13945.md)
 * [Apache-Dubbo-Java反序列化漏洞-CVE-2019-17564](vulhub/Apache-Dubbo-Java反序列化漏洞-CVE-2019-17564.md)
 * [Apache-Flink-小于1.9.1远程代码执行-CVE-2020-17518](vulhub/Apache-Flink-小于1.9.1远程代码执行-CVE-2020-17518.md)
