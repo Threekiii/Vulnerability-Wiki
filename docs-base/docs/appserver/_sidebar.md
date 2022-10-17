@@ -22,6 +22,7 @@
 * [VoIPmonitor-远程命令执行漏洞-CVE-2021-30461](appserver/VoIPmonitor-远程命令执行漏洞-CVE-2021-30461.md)
 * [Windows-Chrome-远程命令执行漏洞](appserver/Windows-Chrome-远程命令执行漏洞.md)
 * [WordPress-3DPrint-Lite-3dprint-lite-functions.php-任意文件上传漏洞](appserver/WordPress-3DPrint-Lite-3dprint-lite-functions.php-任意文件上传漏洞.md)
+* [WordPress-All-in-One-Video-Gallery-video.php-任意文件读取漏洞-CVE-2022-2633](appserver/WordPress-All-in-One-Video-Gallery-video.php-任意文件读取漏洞-CVE-2022-2633.md)
 * [WordPress-Duplicator-duplicator.php-任意文件读取漏洞-CVE-2020-11738](appserver/WordPress-Duplicator-duplicator.php-任意文件读取漏洞-CVE-2020-11738.md)
 * [WordPress-Redux-Framework-class-redux-helpers.php-敏感信息泄漏漏洞-CVE-2021-38314](appserver/WordPress-Redux-Framework-class-redux-helpers.php-敏感信息泄漏漏洞-CVE-2021-38314.md)
 * [WordPress-Simple-File-List-ee-downloader.php-任意文件读取漏洞-CVE-2022-1119](appserver/WordPress-Simple-File-List-ee-downloader.php-任意文件读取漏洞-CVE-2022-1119.md)
