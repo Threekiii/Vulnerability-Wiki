@@ -20,17 +20,17 @@ docker-compose up -d
 
 启动后，访问`http://your-ip/install/`来安装discuz，只用修改数据库地址为`db`，其他保持默认即可。
 
-![image-20220222131339964](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221313350.png)
+![image-20220222131339964](./images/202202221313350.png)
 
 ## 漏洞复现
 
 访问`http://your-ip/robots.txt`可见robots.txt是存在的：
 
-![image-20220222131412780](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221314844.png)
+![image-20220222131412780](./images/202202221314844.png)
 
 注册用户后，在个人设置页面找到自己的formhash：
 
-![image-20220222131618637](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221316746.png)
+![image-20220222131618637](./images/202202221316746.png)
 
 带上自己的Cookie、formhash发送如下数据包：
 
@@ -65,11 +65,11 @@ true
 ------WebKitFormBoundaryW8uA1wbCsmuiargU--
 ```
 
-![image-20220222132220237](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221322360.png)
+![image-20220222132220237](./images/202202221322360.png)
 
 提交成功之后，用户资料修改页面上的出生地就会显示成下图所示的状态：
 
-![image-20220222132303344](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221323368.png)
+![image-20220222132303344](./images/202202221323368.png)
 
 说明我们的脏数据已经进入数据库了。
 
@@ -86,7 +86,7 @@ true
 
 用浏览器打开该页面，上传一个正常图片。如果遇到下图这样的情况，需要修改数据包。
 
-![image-20220222143620386](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221436463.png)
+![image-20220222143620386](./images/202202221436463.png)
 
 Burpsuite抓包，将Refer和Cookie替换为正常上传数据包的值。
 
@@ -111,4 +111,4 @@ Connection: close
 
 再次访问`http://your-ip/robots.txt`，发现文件成功被删除。
 
-![image-20220222145130066](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221451120.png)
+![image-20220222145130066](./images/202202221451120.png)

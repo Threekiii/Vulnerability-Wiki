@@ -22,13 +22,13 @@ docker-compose up -d
 
 打开yaaw，点击配置按钮，填入运行aria2的目标域名：`http://your-ip:6800/jsonrpc`
 
-![image-20220221192510551](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202211925680.png)
+![image-20220221192510551](./images/202202211925680.png)
 
 然后点击Add，增加一个新的下载任务，将另一台VPS服务器上的反弹shell脚本下载至/etc/cron.d。
 
 在Dir的位置填写下载至的目录，File Name处填写文件名。比如，我们通过写入一个crond任务来反弹shell：
 
-![image-20220221193153466](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202211931602.png)
+![image-20220221193153466](./images/202202211931602.png)
 
 这时候，arai2会将恶意文件（我指定的另一台VPS服务器上的URL，为http://xxx.xxx.xxx.xxx/reverse_shell.sh）下载到/etc/cron.d/目录下，文件名为shell。而在debian中，/etc/cron.d目录下的所有文件将被作为计划任务配置文件（类似crontab）读取，等待一分钟不到即成功反弹shell：
 
@@ -41,11 +41,11 @@ docker-compose up -d
 
 cron执行时要读取三个地方的配置文件：一是/etc/crontab，二是/etc/cron.d目录下的所有文件，三是每个用户的配置文件。
 
-![image-20220221200226656](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202212002737.png)
+![image-20220221200226656](./images/202202212002737.png)
 
 > 如果反弹不成功，注意crontab文件的格式，以及换行符必须是`\n`，且文件结尾需要有一个换行符（建议直接在VPS服务器上执行vim）。
 
-![image-20220221200141108](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202212001183.png)
+![image-20220221200141108](./images/202202212001183.png)
 
 当然，我们也可以尝试写入其他文件，更多利用方法可以参考[这篇文章](https://paper.seebug.org/120/)。
 

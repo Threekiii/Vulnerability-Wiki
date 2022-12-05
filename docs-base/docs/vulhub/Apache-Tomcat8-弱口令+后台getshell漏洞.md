@@ -61,11 +61,11 @@ docker-compose up -d
 
 访问`http://your-ip:8080/`，点击Manager App：
 
-![image-20220412133434883](https://typora-notes-1308934770.cos.ap-beijing.myqcloud.com/image-20220412133434883.png)
+![image-20220412133434883](./images/image-20220412133434883.png)
 
 跳转tomcat管理页面`http://your-ip:8080/manager/html`，提示输入用户名和密码：
 
-![image-20220412133846764](https://typora-notes-1308934770.cos.ap-beijing.myqcloud.com/image-20220412133846764.png)
+![image-20220412133846764](./images/image-20220412133846764.png)
 
 在kali中使用metasploit对tomcat用户名和密码进行爆破：
 
@@ -91,7 +91,7 @@ msf6 auxiliary(scanner/http/tomcat_mgr_login) > run
 
 爆破成功，用户名密码为`tomcat:tomcat`：
 
-![image-20220412135451368](https://typora-notes-1308934770.cos.ap-beijing.myqcloud.com/image-20220412135451368.png)
+![image-20220412135451368](./images/image-20220412135451368.png)
 
 输入弱密码`tomcat:tomcat`，即可访问后台。
 
@@ -107,13 +107,13 @@ E:\Behinder3\server>jar -cvf project.war shell.jsp
 
 上传war包：
 
-![image-20220412135536050](https://typora-notes-1308934770.cos.ap-beijing.myqcloud.com/image-20220412135536050.png)
+![image-20220412135536050](./images/image-20220412135536050.png)
 
 成功部署：
 
-![image-20220412140450360](https://typora-notes-1308934770.cos.ap-beijing.myqcloud.com/image-20220412140450360.png)
+![image-20220412140450360](./images/image-20220412140450360.png)
 
 冰蝎3成功连接`http://your-ip:8080/project/shell.jsp`：
 
-![image-20220412143831721](https://typora-notes-1308934770.cos.ap-beijing.myqcloud.com/image-20220412143831721.png)
+![image-20220412143831721](./images/image-20220412143831721.png)
 

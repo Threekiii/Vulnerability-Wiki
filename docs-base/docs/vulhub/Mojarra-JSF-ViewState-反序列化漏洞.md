@@ -24,7 +24,7 @@ docker-compose up -d
 
 JSF的ViewState结构如下：
 
-![image-20220226215414515](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202262154554.png)
+![image-20220226215414515](./images/202202262154554.png)
 
 根据这个结构，我们使用ysoserial的Jdk7u21利用链来生成一段合法的Payload：
 
@@ -35,8 +35,8 @@ H4sIAAVGF18AA61WzW8bRRR/Yye2Y9zmo/lsaZvQlnxAd/PlJsURbT5Ia3BIhNNUwocwXk/sbde7293Z
 
 然后，我们提交表单并抓包，修改其中`javax.faces.ViewState`字段的值为上述Payload（需要URL编码）：
 
-![image-20220226223548557](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202262235702.png)
+![image-20220226223548557](./images/202202262235702.png)
 
 `touch /tmp/success`已成功执行：
 
-![image-20220226223611383](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202262236431.png)
+![image-20220226223611383](./images/202202262236431.png)

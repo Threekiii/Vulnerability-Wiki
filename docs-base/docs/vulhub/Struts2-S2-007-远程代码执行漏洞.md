@@ -70,7 +70,7 @@ docker-compose up -d
 
 将Exp传入可以利用的输入框（age），得到命令执行结果：
 
-![image-20220301170152780](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011701833.png)
+![image-20220301170152780](./images/202203011701833.png)
 
 ### 反弹shell
 
@@ -107,4 +107,4 @@ bash /usr/local/tomcat/shell.sh
 
 成功接收反弹shell：
 
-![image-20220301170256417](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011702511.png)
+![image-20220301170256417](./images/202203011702511.png)

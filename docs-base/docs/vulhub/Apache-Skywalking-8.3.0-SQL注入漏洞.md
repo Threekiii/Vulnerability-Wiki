@@ -25,7 +25,7 @@ docker-compose up -d
 
 可见，SQL语句已经出错，`metricName`参数的值被拼接到`from`后面。
 
-![image-20220301101805554](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011018294.png)
+![image-20220301101805554](./images/202203011018294.png)
 
 这个请求的HTTP数据包为：
 

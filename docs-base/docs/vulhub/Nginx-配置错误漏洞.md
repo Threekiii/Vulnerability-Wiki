@@ -40,7 +40,7 @@ location /files {
 
 Payload: `http://your-ip:8081/files../` ，成功穿越到根目录。
 
-![image-20220227222039275](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202272220345.png)
+![image-20220227222039275](./images/202202272220345.png)
 
 ### 错误3 
 

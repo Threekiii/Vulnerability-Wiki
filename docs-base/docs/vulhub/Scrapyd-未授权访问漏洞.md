@@ -16,7 +16,7 @@ docker-compose up -d
 
 环境启动后，访问`http://your-ip:6800`即可看到Web界面。
 
-![image-20220228223956758](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202282239821.png)
+![image-20220228223956758](./images/202202282239821.png)
 
 ## 漏洞复现
 
@@ -50,7 +50,7 @@ curl http://your-ip:6800/addversion.json -F project=evil -F version=r01 -F egg=@
 
 成功执行命令`touch awesome_poc`：
 
-![image-20220228225416938](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202282254990.png)
+![image-20220228225416938](./images/202202282254990.png)
 
 同样的方法实现反弹shell，编辑 `evil/__init__.py`, 加入恶意代码：
 
@@ -81,4 +81,4 @@ curl http://your-ip:6800/addversion.json -F project=evil -F version=r01 -F egg=@
 
 成功反弹shell：
 
-![image-20220228230711087](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202282307169.png)
+![image-20220228230711087](./images/202202282307169.png)

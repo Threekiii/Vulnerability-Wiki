@@ -14,7 +14,7 @@ docker-compose up -d
 
 访问`http://your-ip:7001/uddiexplorer/`，无需登录即可查看uddiexplorer应用。
 
-![image-20220302210736666](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022107741.png)
+![image-20220302210736666](./images/202203022107741.png)
 
 ## 漏洞复现
 
@@ -31,11 +31,11 @@ Connection: close
 
 可访问的端口将会得到错误，一般是返回status code（如下图），如果访问的非http协议，则会返回`did not have a valid SOAP content-type`。
 
-![image-20220302211012943](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022110046.png)
+![image-20220302211012943](./images/202203022110046.png)
 
 修改为一个不存在的端口，将会返回`could not connect over HTTP to server`。
 
-![image-20220302211141064](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022111161.png)
+![image-20220302211141064](./images/202203022111161.png)
 
 通过错误的不同，即可探测内网状态。
 
@@ -47,7 +47,7 @@ Weblogic的SSRF有一个比较大的特点，其虽然是一个“GET”请求�
 
 首先，通过ssrf探测内网中的redis服务器（docker环境的网段一般是172.*），发现`172.18.0.2:6379`可以连通：
 
-![image-20220302220543308](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022205403.png)
+![image-20220302220543308](./images/202203022205403.png)
 
 发送三条redis命令，将弹shell脚本写入`/etc/crontab`：
 
@@ -83,7 +83,7 @@ Connection: close
 
 成功反弹：
 
-![image-20220302220843300](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022208358.png)
+![image-20220302220843300](./images/202203022208358.png)
 
 最后补充一下，可进行利用的cron有如下几个地方：
 

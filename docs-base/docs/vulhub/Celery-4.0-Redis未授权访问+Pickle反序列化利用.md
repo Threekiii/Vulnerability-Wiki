@@ -53,7 +53,7 @@ pip install redis
 python exploit.py [主机IP]
 ```
 
-![image-20220301104913810](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011049883.png)
+![image-20220301104913810](./images/202203011049883.png)
 
 查看结果：
 
@@ -63,7 +63,7 @@ docker-compose logs celery
 
 可以看到如下任务消息报错：
 
-![image-20220301104801643](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011048739.png)
+![image-20220301104801643](./images/202203011048739.png)
 
 ```
 docker-compose exec celery ls -l /tmp
@@ -71,5 +71,5 @@ docker-compose exec celery ls -l /tmp
 
 可以看到成功创建了文件`celery_success`
 
-![image-20220301104827599](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011048652.png)
+![image-20220301104827599](./images/202203011048652.png)
 

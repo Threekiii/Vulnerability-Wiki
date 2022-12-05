@@ -45,7 +45,7 @@ docker-compose up -d
 
 发送请求，执行命令：
 
-![image-20220301173613307](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011736450.png)
+![image-20220301173613307](./images/202203011736450.png)
 
 ### 反弹shell
 
@@ -82,4 +82,4 @@ bash /usr/local/tomcat/shell.sh
 
 成功接收反弹shell：
 
-![image-20220301173937416](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011739511.png)
+![image-20220301173937416](./images/202203011739511.png)

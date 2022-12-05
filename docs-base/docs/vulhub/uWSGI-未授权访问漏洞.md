@@ -26,11 +26,11 @@ docker-compose up -d
 
 使用[poc.py](https://github.com/vulhub/vulhub/blob/master/uwsgi/unacc/poc.py)，执行命令`python poc.py -u your-ip:8000 -c "touch /tmp/awesome_poc"`：
 
-![image-20220302163756128](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203021637238.png)
+![image-20220302163756128](./images/202203021637238.png)
 
 执行`docker-compose exec web bash`进入容器，可见`/tmp/awesome_poc`已经成功执行：
 
-![image-20220302163833950](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203021638121.png)
+![image-20220302163833950](./images/202203021638121.png)
 
 ## 漏洞POC
 

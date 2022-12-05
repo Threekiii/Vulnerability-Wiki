@@ -14,7 +14,7 @@ docker-compose up -d
 
 环境启动后，访问`http://your-ip:8088`即可看到Hadoop YARN ResourceManager WebUI页面。
 
-![image-20220224001542564](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202240015697.png)
+![image-20220224001542564](./images/202202240015697.png)
 
 ## 漏洞复现
 
@@ -55,4 +55,4 @@ requests.post(url, json=data)
 
 成功反弹shell：
 
-![image-20220224001724727](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202240017808.png)
+![image-20220224001724727](./images/202202240017808.png)

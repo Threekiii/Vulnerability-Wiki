@@ -274,5 +274,5 @@ if __name__ == '__main__':
     print(force_text(response))
 ```
 
-![image-20220223183005475](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202231830519.png)
+![image-20220223183005475](./images/202202231830519.png)
 

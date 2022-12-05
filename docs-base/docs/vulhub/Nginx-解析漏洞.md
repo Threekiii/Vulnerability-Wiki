@@ -21,11 +21,11 @@ Vulhub直接执行`docker-compose up -d`启动容器，无需编译。
 
 正常显示：
 
-![image-20220228101951322](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202281019435.png)
+![image-20220228101951322](./images/202202281019435.png)
 
 增加`/.php`后缀，被解析成PHP文件：
 
-![image-20220228102009950](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202281020083.png)
+![image-20220228102009950](./images/202202281020083.png)
 
 访问`http://your-ip/index.php`可以测试上传功能，上传代码不存在漏洞，但利用解析漏洞即可getshell。
 
@@ -37,8 +37,8 @@ copy 1.jpg/b+1.php/a 2.jpg
 
 Vulhub镜像上传图片之前需要赋予`/var/www/html`目录写入权限。
 
-![image-20220228103257746](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202281032796.png)
+![image-20220228103257746](./images/202202281032796.png)
 
 访问`http://your-ip/uploadfiles/fb5c81ed3a220004b71069645f112867.png/.php`即可触发解析漏洞。
 
-![image-20220228103543224](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202281035883.png)
+![image-20220228103543224](./images/202202281035883.png)

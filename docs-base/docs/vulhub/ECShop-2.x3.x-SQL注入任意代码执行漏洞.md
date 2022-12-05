@@ -73,9 +73,9 @@ Cache-Control: max-age=0
 
 2.x的执行结果：
 
-![image-20220222231029623](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202222310789.png)
+![image-20220222231029623](./images/202202222310789.png)
 
 3.x的执行结果（使用3.x的POC执行不成功，使用2.x的POC执行成功）：
 
-![image-20220222232542804](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202222325965.png)
+![image-20220222232542804](./images/202202222325965.png)
 

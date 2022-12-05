@@ -23,11 +23,11 @@ docker-compose up -d
 
 正常上传PHP文件是不允许的，我们可以上传一个shell.shtml文件：
 
-![image-20220221190853964](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202211908075.png)
+![image-20220221190853964](./images/202202211908075.png)
 
 成功上传，然后访问shell.shtml，可见命令已执行，成功查看当前目录：
 
-![image-20220221191023391](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202211910477.png)
+![image-20220221191023391](./images/202202211910477.png)
 
 创建反弹shell，依次上传并访问shell.shtml（一共三次）
 
@@ -42,5 +42,5 @@ docker-compose up -d
 
 成功接收反弹shell
 
-![image-20220221191821240](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202211918306.png)
+![image-20220221191821240](./images/202202211918306.png)
 

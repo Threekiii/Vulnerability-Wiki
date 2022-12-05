@@ -48,17 +48,17 @@ Host: target:8080
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36
 ```
 
-![image-20220301161455042](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011614123.png)
+![image-20220301161455042](./images/202203011614123.png)
 
 命令`touch /tmp/awesome_poc`成功执行：
 
-![image-20220301161548594](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011615639.png)
+![image-20220301161548594](./images/202203011615639.png)
 
 网上一些POC放到tomcat8下会返回400，研究了一下发现字符`\`、`"`不能直接放path里，需要urlencode，编码以后再发送就好了。这个POC没回显。
 
 POC用到了OGNL的Expression Evaluation：
 
-![1](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011611125.jpeg)
+![1](./images/202203011611125.jpeg)
 
 大概可以理解为，`(aaa)(bbb)`中aaa作为OGNL表达式字符串，bbb作为该表达式的root对象，所以一般aaa位置如果需要执行代码，需要用引号包裹起来，而bbb位置可以直接放置Java语句。`(aaa)(bbb)=true`实际上就是`aaa=true`。不过确切怎么理解，还需要深入研究，有待优化。
 
@@ -97,4 +97,4 @@ GET /example/HelloWorld.action?(%27%5cu0023_memberAccess[%5c%27allowStaticMethod
 
 成功接收反弹shell：
 
-![image-20220301162511817](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011625901.png)
+![image-20220301162511817](./images/202203011625901.png)

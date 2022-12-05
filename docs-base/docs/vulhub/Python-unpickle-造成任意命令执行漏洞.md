@@ -47,4 +47,4 @@ response = requests.get("http://192.168.174.128:8000/", cookies=dict(
 print(response.content)
 ```
 
-![image-20220228172508273](https://typora-1308934770.cos.ap-beijing.myqcloud.com/202202281725409.png)
+![image-20220228172508273](./images/202202281725409.png)
