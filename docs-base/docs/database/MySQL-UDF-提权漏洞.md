@@ -2,7 +2,7 @@
 
 ## 漏洞描述
 
-UDF是MySQL的一个共享库，通过udf创建能够执行系统命令的函数sys_exec、sys_eval，使得入侵者能够获得一般情况下无法获得的shell执行权限。
+UDF 是 MySQL 的一个共享库，通过 udf 创建能够执行系统命令的函数 sys_exec、sys_eval，使得入侵者能够获得一般情况下无法获得的 shell 执行权限。
 
 参考链接：
 
@@ -17,6 +17,12 @@ UDF是MySQL的一个共享库，通过udf创建能够执行系统命令的函数
 ```
 
 ## 漏洞复现
+
+查看 `secure_file_priv`：
+
+```
+mysql> show global variables like '%secure_file_priv%';
+```
 
 寻找插件目录，将 UDF 的动态链接库文件放到 MySQL 的插件目录：
 
@@ -80,4 +86,3 @@ Query OK, 0 rows affected (0.00 sec)
 mysql> select * from func;
 Empty set (0.00 sec)
 ```
-
