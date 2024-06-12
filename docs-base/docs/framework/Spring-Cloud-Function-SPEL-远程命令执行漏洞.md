@@ -2,7 +2,7 @@
 
 ## 漏洞描述
 
-Spring Cloud Function 是基于Spring Boot 的函数计算框架，它抽象出所有传输细节和基础架构，允许开发人员保留所有熟悉的工具和流程，并专注于业务逻辑。 由于Spring Cloud Function中RoutingFunction类的apply方法将请求头中的“spring.cloud.function.routing-expression”参数作为Spel表达式进行处理，造成了Spel表达式注入漏洞，未经授权的远程攻击者可利用该漏洞执行任意代码。
+Spring Cloud Function 是基于 Spring Boot 的函数计算框架，它抽象出所有传输细节和基础架构，允许开发人员保留所有熟悉的工具和流程，并专注于业务逻辑。 由于 Spring Cloud Function 中 RoutingFunction 类的 apply 方法将请求头中的“spring.cloud.function.routing-expression”参数作为 Spel 表达式进行处理，造成了 Spel 表达式注入漏洞，未经授权的远程攻击者可利用该漏洞执行任意代码。
 
 ## 漏洞影响
 
@@ -20,7 +20,7 @@ Spring Cloud Function
 
 ![image-20220519160206177](images/202205191602220.png)
 
-发送POC
+发送 POC
 
 ```
 POST /functionRouter HTTP/1.1

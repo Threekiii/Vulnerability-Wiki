@@ -2,7 +2,7 @@
 
 ## 漏洞描述
 
-FastAdmin是一款基于ThinkPHP和Bootstrap的极速后台开发框架。FastAdmin框架存在有条件RCE漏洞，当攻击者具有一定用户权限的前提下，可以实现任意文件上传，导致RCE。
+FastAdmin 是一款基于 ThinkPHP 和 Bootstrap 的极速后台开发框架。FastAdmin 框架存在有条件 RCE 漏洞，当攻击者具有一定用户权限的前提下，可以实现任意文件上传，导致 RCE。
 
 参考链接：
 
@@ -20,10 +20,10 @@ app="FASTADMIN-框架" || body="\"uploadurl\":\"ajax\/upload\"" || body="api.fas
 前期准备：
 
 1. 该接口至少需要普通用户权限，可以先在前台注册一个用户然后登录。
-2. 需要修改默认配置才能使用分片上传功能。设置 application/extra/upload.php 下的chunking 项为 true。
+2. 需要修改默认配置才能使用分片上传功能。设置 application/extra/upload.php 下的 chunking 项为 true。
 3. 可使用 application/index/controller/Ajax 下的 upload() 方法作为入口点。根据 tp5 的路由，访问该入口点的 url 为 index.php?s=index/ajax/upload。
 
-上传头像处post：
+上传头像处 post：
 
 ```
 //传入xx.php

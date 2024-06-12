@@ -1,10 +1,10 @@
-# Java RMI Registry 反序列化漏洞(jdk8u232_b09)
+# Java RMI Registry 反序列化漏洞 (jdk8u232_b09)
 
 ## 漏洞描述
 
-Java Remote Method Invocation 用于在Java中进行远程调用。RMI存在远程bind的功能(虽然大多数情况不允许远程bind)，在bind过程中，伪造Registry接收到的序列化数据(实现了Remote接口或动态代理了实现了Remote接口的对象)，使Registry在对数据进行反序列化时触发相应的利用链(环境用的是commons-collections:3.2.1).
+Java Remote Method Invocation 用于在 Java 中进行远程调用。RMI 存在远程 bind 的功能 (虽然大多数情况不允许远程 bind)，在 bind 过程中，伪造 Registry 接收到的序列化数据 (实现了 Remote 接口或动态代理了实现了 Remote 接口的对象)，使 Registry 在对数据进行反序列化时触发相应的利用链 (环境用的是 commons-collections:3.2.1).
 
-自jdk8u121起，Registry对反序列化的类做了白名单限制
+自 jdk8u121 起，Registry 对反序列化的类做了白名单限制
 
 ```java
 if (String.class == clazz
@@ -22,24 +22,24 @@ if (String.class == clazz
 }
 ```
 
-我们需要在上面的几个白名单里面找到相应的可利用的类 具体原理见[浅谈RMI Registry反序列化问题](http://blog.0kami.cn/2020/02/06/rmi-registry-security-problem/)
+我们需要在上面的几个白名单里面找到相应的可利用的类 具体原理见 [浅谈RMI Registry反序列化问题](http://blog.0kami.cn/2020/02/06/rmi-registry-security-problem/)
 
 ## 环境搭建
 
-Vulhub执行如下命令编译及启动RMI Registry和服务器：
+Vulhub 执行如下命令编译及启动 RMI Registry 和服务器：
 
 ```
 docker-compose build
 docker-compose run -e RMIIP=your-ip -p 1099:1099 rmi
 ```
 
-其中，`your-ip`是服务器IP，客户端会根据这个IP来连接服务器。
+其中，`your-ip` 是服务器 IP，客户端会根据这个 IP 来连接服务器。
 
-环境启动后，RMI Registry监听在1099端口。
+环境启动后，RMI Registry 监听在 1099 端口。
 
 ## 漏洞复现
 
-通过[ysoserial](https://github.com/wh1t3p1g/ysoserial)的exploit包中的RMIRegistryExploit2或者3进行攻击
+通过 [ysoserial](https://github.com/wh1t3p1g/ysoserial) 的 exploit 包中的 RMIRegistryExploit2 或者 3 进行攻击
 
 ```bash
 // 开启JRMPListener
@@ -50,4 +50,4 @@ java -cp target/ysoserial-0.0.6-SNAPSHOT-all.jar ysoserial.exploit.RMIRegistryEx
 
 ![image-20200206135822418](images/image-20200206135822418.png)
 
-Registry会返回报错，这个没关系正常，命令会正常执行。
+Registry 会返回报错，这个没关系正常，命令会正常执行。

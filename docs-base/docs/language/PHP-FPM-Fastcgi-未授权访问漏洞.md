@@ -8,18 +8,18 @@
 
 ## 环境搭建
 
-Vulhub编译及运行测试环境：
+Vulhub 编译及运行测试环境：
 
 ```
 docker-compose build
 docker-compose up -d
 ```
 
-访问`http://your-ip:9000/`
+访问 `http://your-ip:9000/`
 
 ## 漏洞复现
 
-任意代码执行exp：
+任意代码执行 exp：
 
 ```python
 import socket

